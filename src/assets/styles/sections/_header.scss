@@ -1,0 +1,244 @@
+@import "../util/var";
+@import "../util/mixins";
+
+
+//HEADER
+.header {
+    @include flex_row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: inherit;
+    width: 100%;
+    padding: 2rem 12rem 5.6rem 12rem;
+    
+    &-menu {
+        @include flex_row;
+    }
+
+    &-burger {
+        display: none;
+    }
+}
+
+.header-logo {
+    max-width: 8.2rem;
+    width: 100%;
+    margin-right: 14.8rem; 
+    
+    &:hover {
+        transform: scale(2);
+        transition-duration: 1s;
+    }
+} 
+.nav {
+    display: flex;
+    align-items: center;
+    padding-left: 0;
+    
+    &-item + &-item {
+        margin-left: 4.4rem;
+    }
+
+    &-link {
+        @include headerFz;
+        font-weight: 400;
+        text-decoration: none;
+        color: rgba($c-white, 0.6);
+        
+        &.active {
+            color: rgba($c-white, 1);
+            font-weight: 500;
+        }
+    }
+}
+.control {
+    display: flex;
+    align-items: center;
+    
+    &-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 2.5rem;
+    }
+
+    &-item {
+        margin-right: .6rem;
+    }
+
+    &-language {
+        font-weight: 500;
+        font-size: 1.2rem;
+        line-height: 150%;
+        color: $control-textColor;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+
+    &-globe { 
+        max-width: 2.4rem;
+        width: 100%;
+
+        &:hover {
+            transform:rotate(180deg);
+            transition-duration: 2s;
+        }
+    }
+
+    &-polygon {
+        max-width: .6rem;
+        width: 100%;
+
+        &:hover {
+            transform: scale(1.5);
+        }
+    }
+    &-button {
+        @include headerFz;
+        font-weight: 700;
+        max-width: 10.2rem;
+        width: 100%;
+        padding: 1.2rem 3.2rem;
+        background: $btnColor;
+        font-weight: bold;
+        text-align: center;
+        color: $c-white;
+        border-radius: .6rem;
+        transition-duration: 0.5s;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background: $btn-bgHov;
+        }  
+    }
+}
+
+//ADAPTIVE
+@media screen and (max-width: 768px) {
+    body.lock {
+        overflow: hidden;
+    }
+    .header {
+        position: relative;
+
+        &-logo {
+            position: fixed;
+            top: 2%;
+            left: 8%;
+            margin-right: 0;
+        }
+    }
+    .burger {
+        position: absolute;
+        top: 26.5%;
+        right: 8%;
+    }
+    .header-burger {
+        display: block;
+        position: relative;
+        width: 3rem;
+        height: 2rem;
+        
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            background-color: $c-white;
+            width: 100%;
+            height: .2rem;
+            z-index: 2;
+            transition: all .2s ease 0s;
+        }
+
+        &::before {
+            top:0;
+        }
+
+        &::after {
+            bottom: 0;
+        }
+
+        & span {
+            display: block;
+            position: absolute;
+            left: 0;
+            background-color: $c-white;
+            width: 100%;
+            height: .2rem;
+            top: .9rem;
+            transition: all .2s ease 0s;
+        }
+
+        &.active::before {
+            transform: rotate(45deg);
+            top: .9rem;
+        }
+
+        &.active::after {
+            transform: rotate(-45deg);
+            bottom: .9rem;
+        }
+
+        &.active span {
+            transform: scale(0);
+        }
+    }
+    .nav {
+        position: fixed;
+        //top: -120%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: block;
+        text-align: center;
+        background-color: $bgBurger;
+        transition: all .2s ease 0s;
+        overflow: auto;
+        margin-top: 4rem;
+
+        &.active {
+            top: 0;
+        }
+
+        &-item + &-item {
+            margin-left: 0;
+        }
+
+        &-link {
+            margin-top: 3rem;
+            font-size: 2rem;
+            line-height: 2.5rem;
+        }
+    }
+    .control {
+        &-name {
+            visibility: hidden;
+        }
+        &-button {
+            background: rgb(88,92,184);
+            background: linear-gradient(180deg, rgba(88,92,184,1) 14%, rgba(56,59,131,1) 100%);
+            padding: 1rem 1.6rem;
+            color: rgba($control-textColor, 0.9);
+
+            &:hover,
+            &:focus,
+            &:active {
+                background: #3D408F;
+            }  
+        } 
+    }
+}
+@media screen and (max-width: 350px) {
+    .header-logo {
+        top: .7%;
+        left: 8%;
+    }
+    .control {
+        display: none;
+    }
+}
