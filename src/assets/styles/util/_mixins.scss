@@ -1,0 +1,21 @@
+// for example 
+@mixin headerFz {
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+}
+// можно передавать параметры
+@mixin font ($color, $fz) {
+    font-size: $fz;
+    font-family: $f-main;
+    color: $color;
+    font-weight: 700;
+}
+@mixin flex_row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+@mixin flex_column {
+    display: flex;
+    flex-direction: column;
+}

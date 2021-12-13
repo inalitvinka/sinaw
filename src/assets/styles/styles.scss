@@ -1,6 +1,7 @@
 @import "util/normalize";
-@import "util/global";
+// файл обнуляющих стилей
+@import "util/global"; 
 
 @import "sections/header";
-//дпугие секции
+//другие секции
 @import "sections/footer";

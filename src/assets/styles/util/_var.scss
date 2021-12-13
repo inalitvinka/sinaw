@@ -1,11 +1,12 @@
-$c-black: #000;
-$c-blue: #33f;
+$bgColor: #171836;
+$c-white: #FFFFFF;
+$btnColor: #F5443B;
+$btn-bgHov: #9e261f;
+$control-textColor: #D1D1D7;
+$bgBurger: #191931;
+$btn-burgerHov: #3D408F;
 
-$f-main: 'TT Norms', sans-serif;
-$f-headers: 'TT Norms', sans-serif;
+$f-main: 'Inter';
 
-$z-fixed: 201;
-$z-header: 200;
-$z-popup: 199;
-$z-mobile-nav: 198;
-$z-sticky: 99;
+$fz-title: 3.6rem; // make mixin for that
+$fz-subtitle: 1.4rem; // make mixin for that
