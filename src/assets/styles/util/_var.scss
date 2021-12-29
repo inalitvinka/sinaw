@@ -6,7 +6,17 @@ $control-textColor: #D1D1D7;
 $bgBurger: #191931;
 $btn-burgerHov: #3D408F;
 
+$c-whiteOpct: rgba(255, 255, 255, 0.4);
 $f-main: 'Inter';
 
+$bgPlus: #8087B8; // fix that!
+$bg-heroItem: linear-gradient(180deg, rgba(76, 94, 157, 0.9) -32.08%, rgba(23, 24, 54, 0.9) 127.36%);
+$c-borderPlus: #8087B8;
+$c-TextGal: #BBBBC4;
+$c-spanGal: #E75353;
+$bgFormFld: #1F2143;
+$bgFormBtn: #282B57;
+$c-heroBtn: rgba(154, 156, 203, 0.6);
+$bg-heroGal: linear-gradient(180deg, rgba(76, 94, 157, 0.8) -32.08%, rgba(23, 24, 54, 0.8) 127.36%);
 $fz-title: 3.6rem; // make mixin for that
 $fz-subtitle: 1.4rem; // make mixin for that

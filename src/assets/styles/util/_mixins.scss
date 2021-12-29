@@ -19,3 +19,23 @@
     display: flex;
     flex-direction: column;
 }
+// FONT MIXINS
+@mixin fontSubt {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8rem;
+    line-height: 150%;
+    color: $c-whiteOpct;
+}
+@mixin fontC-white {
+    font-style: normal;
+    font-weight: normal;
+    line-height: 150%;
+    color: $c-whiteOpct;
+}
+@mixin fontTitle {
+    font-style: normal;
+    font-weight: 600;
+    color: $c-white;
+    opacity: 80%;
+}
