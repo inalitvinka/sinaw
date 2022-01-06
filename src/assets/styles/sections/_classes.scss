@@ -1,0 +1,18 @@
+@import "../util/var";
+@import "../util/mixins";
+
+
+.classes {
+    padding: 6.6rem 12rem 6.5rem 12rem;
+
+    &-title {
+        @include fontCardTitle;
+        margin-bottom: 2rem;
+    }
+
+    &-subtitle {
+        @include fontSubt;
+        margin-bottom: 8.4rem;
+
+    }
+}

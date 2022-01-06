@@ -39,3 +39,11 @@
     color: $c-white;
     opacity: 80%;
 }
+@mixin fontCardTitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.6rem;
+    line-height: 150%;
+    color: $c-white;
+    opacity: 80%;
+}
