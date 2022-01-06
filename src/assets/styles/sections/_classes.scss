@@ -143,5 +143,41 @@
 
         }
     }
-    
+
+}
+//ADAPTIVE
+@media screen and (max-width: 1355px) {
+    .classes {
+        
+        &-content {
+            margin-bottom: 3rem;
+        }
+        &-content + &-content {
+            margin-left: 0;
+        }
+
+        &-cards {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-around;
+            
+        }
+    } 
+     
+}
+@media screen and (max-width: 497px) {
+    .classes-card__img_item {
+        display: none;
+    }
+}
+@media screen and (max-width: 437px) {
+    .classes-btn__register {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 397px) {
+    .classes-btn__register {
+        font-size: .9rem;
+    }
 }
