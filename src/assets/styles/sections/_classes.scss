@@ -26,6 +26,15 @@
         background: $bg-classCard;
     }
 
+    &-content + &-content {
+        margin-left: 3rem;
+    }
+
+    &-cards {
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
     &-card {
         padding: 1.2rem 1.2rem 2rem 1.2rem;
         position: relative;
