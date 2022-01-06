@@ -19,6 +19,12 @@
     display: flex;
     flex-direction: column;
 }
+@mixin flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 // FONT MIXINS
 @mixin fontSubt {
     font-style: normal;
