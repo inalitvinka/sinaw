@@ -7,12 +7,118 @@
 
     &-title {
         @include fontCardTitle;
+        text-align: center;
         margin-bottom: 2rem;
     }
 
     &-subtitle {
         @include fontSubt;
+        text-align: center;
         margin-bottom: 8.4rem;
 
     }
+    
+    &-content {
+        max-width: 27.6rem;
+        width: 100%;
+        border: solid .3rem #292B56;
+        border-radius: 2rem;
+        background: $bg-classCard;
+    }
+
+    &-card {
+        padding: 1.2rem 1.2rem 2rem 1.2rem;
+        position: relative;
+
+        &__img {
+            margin-bottom: 2.4rem;
+             
+        } 
+
+        &__pic {
+            max-width: 25.2rem;
+            width: 100%;
+        }
+
+        &__img_item {
+            position: absolute;
+            top: 34%;
+            left: 7%;
+            background: $c-white;
+            opacity: 20%;
+            border-radius: .8rem;
+            width: 8.8rem;
+            height: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__item-text {
+            padding: .6rem 1.6rem;
+            //@include fontC-white;
+            //color: $c-white;
+            //opacity: 100%;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 150%;
+            font-size: 1.2rem;
+        }
+
+        &__text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 150%;
+            color: #3BF5BD;
+            margin-bottom: .8rem;
+        }
+
+        &__title {
+            @include fontFz;
+            margin-bottom: 1.2rem;
+        }
+
+        &__subtitle {
+            @include fontC-white;
+            padding-bottom: 2rem;
+            border-bottom: solid .1rem #292B56;
+            margin-bottom: 2rem;
+        }
+
+        &__container {
+            display: flex;
+            
+        }
+
+        &__item {
+            max-width: 4rem;
+            width: 100%;
+            overflow: hidden;
+            display: block;
+        }
+
+        &__name {
+            margin-left: 1.5rem;
+        }
+
+        &__item-one {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 150%;
+            color: $c-white;
+            opacity: 80%;
+            margin-bottom: .2rem;
+        }
+
+        &__item-two {
+            @include fontC-white;
+            font-size: 1.2rem;
+        }
+
+    }
+
+    
+
+
 }
