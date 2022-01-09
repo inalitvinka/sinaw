@@ -141,6 +141,15 @@
             background-color: $bgColor;
             cursor: pointer;
 
+            &:hover{
+                background-color: $btn-bgHov;
+                color: $c-white;
+                opacity: 80%;
+            }
+            &:focus {
+                box-shadow: 0 0 0 .15rem $btnColor;
+                outline: none;
+            }
         }
     }
 }
