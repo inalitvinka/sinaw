@@ -14,15 +14,15 @@ mixin cardClasses(src, nik, text, ttl, subTtl, srcTwo, ttlM, subTtlM )
                         img.classes-card__item.mentor__one(src= srcTwo , alt="mentor")
                     .h2.classes-card__name
                         h2.classes-card__item-one= ttlM
-                        p.classes-card__item-two= subTtlM  
-
+                        p.classes-card__item-two= subTtlM
+               
 
 section.classes.container
     h2.classes-title What Do You Want to Learn?
     p.classes-subtitle Choose the right class as you need. Then enjoy studying.
     .classes-cards   
         +cardClasses('assets/images/classesTechnology.png', '12 Videos', 'Technology', 'Digital Marketing Strategy', 'This course aims to give you deeper understanding of core processes ...', 'assets/images/classMentor-one.png', 'Joey Piere', 'Mentor')   
-
+         
         +cardClasses('assets/images/classesDesign.png', '7 Videos', 'Design', 'Figma Fundamental', 'These lessons and exercises will help you start designing with Figma ...', 'assets/images/classMentor-two.png', 'Araya Sheila', 'Mentor') 
 
         +cardClasses('assets/images/classesCoding.png', '10 Videos', 'Coding', 'HTML Fundamental', 'Well organized and easy to make you understand tutorials with lots of ...', 'assets/images/classMentor-three.png', 'Ellisa Ruth', 'Mentor') 
@@ -30,5 +30,5 @@ section.classes.container
         +cardClasses('assets/images/classesCoding2.png', '16 Videos', 'Coding', 'Android App Development', 'Take your Android coding skills to the next level, advanced Android app ...', 'assets/images/classMentor-four.png', 'Wendy Troye', 'Mentor') 
     .classes-btn
         button.classes-btn__register(type='submit') Show All Classes
-
+    
 
