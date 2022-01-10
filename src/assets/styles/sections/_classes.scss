@@ -4,6 +4,7 @@
 
 .classes {
     padding: 6.6rem 12rem 6.5rem 12rem;
+    width: 100%;
 
     &-title {
         @include fontCardTitle;
@@ -26,13 +27,12 @@
         background: $bg-classCard;
     }
 
-    &-content + &-content {
-        margin-left: 3rem;
-    }
 
     &-cards {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
     }
 
     &-card {
@@ -191,8 +191,6 @@
         }
 
         &-cards {
-            flex-wrap: wrap;
-            align-items: center;
             justify-content: space-around;
             
         }
