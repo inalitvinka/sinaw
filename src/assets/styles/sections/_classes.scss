@@ -120,6 +120,32 @@
             @include fontC-white;
             font-size: 1.2rem;
         }
+
+        &__btn {
+            margin-top: 2.8rem;
+            text-align: center;
+            &_register {
+                color: $c-white;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 1.4rem;
+                line-height: 1.7rem;
+                padding: 1.2rem 3.2rem;
+                border-radius: .6rem;
+                background-color: $btnColor;
+                border: none;
+                cursor: pointer;
+                
+                &:hover{
+                    background-color: $btn-bgHov;
+                }
+                &:focus {
+                    box-shadow: 0 0 0 .15rem $btnColor;
+                    outline: none;
+                }
+            }
+        }
+        
     }
 
     &-btn {
