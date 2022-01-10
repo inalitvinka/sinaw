@@ -37,11 +37,11 @@
 
     &-card {
         padding: 1.2rem 1.2rem 2rem 1.2rem;
-        position: relative;
+        
 
         &__img {
             margin-bottom: 2.4rem;
-             
+            position: relative;
         } 
 
         &__pic {
@@ -51,8 +51,8 @@
 
         &__img_item {
             position: absolute;
-            top: 34%;
-            left: 7%;
+            top: 75%;
+            left: 3%;
             background: $c-white;
             opacity: 20%;
             border-radius: .8rem;
