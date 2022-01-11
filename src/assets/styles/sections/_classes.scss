@@ -1,0 +1,215 @@
+@import "../util/var";
+@import "../util/mixins";
+
+
+.classes {
+    padding: 6.6rem 12rem 6.5rem 12rem;
+    width: 100%;
+
+    &-title {
+        @include fontCardTitle;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &-subtitle {
+        @include fontSubt;
+        text-align: center;
+        margin-bottom: 8.4rem;
+
+    }
+    
+    &-content {
+        max-width: 27.6rem;
+        width: 100%;
+        border: solid .3rem $bord-classCard;
+        border-radius: 2rem;
+        background: $bg-classCard;
+    }
+
+
+    &-cards {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    &-card {
+        padding: 1.2rem 1.2rem 2rem 1.2rem;
+        
+
+        &__img {
+            margin-bottom: 2.4rem;
+            position: relative;
+        } 
+
+        &__pic {
+            max-width: 25.2rem;
+            width: 100%;
+        }
+
+        &__img_item {
+            position: absolute;
+            top: 75%;
+            left: 3%;
+            background: $c-white;
+            opacity: 20%;
+            border-radius: .8rem;
+            width: 8.8rem;
+            height: 3rem;
+            @include flex_center;
+        }
+        &__item-text {
+            padding: .6rem 1.6rem;
+            color: $bgColor;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 150%;
+            font-size: 1.2rem;
+        }
+
+        &__text {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 150%;
+            color: $c-green;
+            margin-bottom: .8rem;
+        }
+
+        &__title {
+            @include fontFz;
+            margin-bottom: 1.2rem;
+        }
+
+        &__subtitle {
+            @include fontC-white;
+            padding-bottom: 2rem;
+            border-bottom: solid .1rem $bord-classCard;
+            margin-bottom: 2rem;
+        }
+
+        &__container {
+            display: flex;
+            
+        }
+
+        &__item {
+            max-width: 4rem;
+            width: 100%;
+            overflow: hidden;
+            display: block;
+        }
+
+        &__name {
+            margin-left: 1.5rem;
+        }
+
+        &__item-one {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.4rem;
+            line-height: 150%;
+            color: $c-white;
+            opacity: 80%;
+            margin-bottom: .2rem;
+        }
+
+        &__item-two {
+            @include fontC-white;
+            font-size: 1.2rem;
+        }
+
+        &__btn {
+            margin-top: 2.8rem;
+            text-align: center;
+            &_register {
+                color: $c-white;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 1.4rem;
+                line-height: 1.7rem;
+                padding: 1.2rem 3.2rem;
+                border-radius: .6rem;
+                background-color: $btnColor;
+                border: none;
+                cursor: pointer;
+                
+                &:hover{
+                    background-color: $btn-bgHov;
+                }
+                &:focus {
+                    box-shadow: 0 0 0 .15rem $btnColor;
+                    outline: none;
+                }
+            }
+        }
+        
+    }
+
+    &-btn {
+        @include flex_center;
+        margin-bottom: 6.5rem;
+        margin-top: 12.1rem;
+
+        &__register {
+            color: $btnColor;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            padding: 1.6rem 3.2rem; 
+            max-width: 19.8rem;
+            width: 100%;
+            border: .1rem solid $btnColor;
+            border-radius: 6px;
+            background-color: $bgColor;
+            cursor: pointer;
+
+            &:hover{
+                background-color: $btn-bgHov;
+                color: $c-white;
+                opacity: 80%;
+            }
+            &:focus {
+                box-shadow: 0 0 0 .15rem $btnColor;
+                outline: none;
+            }
+        }
+    }
+}
+//ADAPTIVE
+@media screen and (max-width: 1355px) {
+    .classes {
+        
+        &-content {
+            margin-bottom: 3rem;
+        }
+        &-content + &-content {
+            margin-left: 0;
+        }
+
+        &-cards {
+            justify-content: space-around;
+            
+        }
+    } 
+     
+}
+@media screen and (max-width: 497px) {
+    .classes-card__img_item {
+        display: none;
+    }
+}
+@media screen and (max-width: 437px) {
+    .classes-btn__register {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 397px) {
+    .classes-btn__register {
+        font-size: .9rem;
+    }
+}

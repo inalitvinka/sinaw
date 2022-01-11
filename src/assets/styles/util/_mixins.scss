@@ -19,6 +19,12 @@
     display: flex;
     flex-direction: column;
 }
+@mixin flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 // FONT MIXINS
 @mixin fontSubt {
     font-style: normal;
@@ -36,6 +42,22 @@
 @mixin fontTitle {
     font-style: normal;
     font-weight: 600;
+    color: $c-white;
+    opacity: 80%;
+}
+@mixin fontCardTitle {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 3.6rem;
+    line-height: 150%;
+    color: $c-white;
+    opacity: 80%;
+}
+@mixin fontFz {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 150%;
     color: $c-white;
     opacity: 80%;
 }
