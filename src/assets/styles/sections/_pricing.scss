@@ -1,2 +1,19 @@
 @import "../util/var";
 @import "../util/mixins";
+
+
+.price {
+    padding: 8.5rem 12rem 11.5rem 12rem;
+    width: 100%;
+
+    &-title {
+        @include fontCardTitle;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    &-subtitle {
+        @include fontSubt;
+        text-align: center;
+        margin-bottom: 8.4rem;
+    }
+}
