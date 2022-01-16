@@ -25,7 +25,33 @@
         max-width: 37.2rem;
         width: 100%;
         
-
+        &__active {
+            position: relative;
+        }
+        &__image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 15rem;
+            width: 100%;   
+        }
+        &__pic {
+            border-radius: 2rem;
+            position: relative;
+        }
+        &__text {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 150%;
+            color: $c-white;
+            opacity: 80%;
+            position: absolute;
+            top: 15%;
+            right: 15%;
+            transform: rotate(33deg);
+        }
+        
         &__container {
             padding: 4rem 3.6rem 3.6rem 3.6rem;
             border-radius: 2rem;
@@ -148,8 +174,3 @@
         }
     }
 }
-//.price-card__subtitle_one {
-  //  font-size: 1.4rem;
- //   writing-mode: vertical-lr;
-  //  text-orientation: upright;
-//}
