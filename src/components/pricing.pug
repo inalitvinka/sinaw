@@ -1,5 +1,5 @@
 // PRICING SECTION
-mixin cardPrice(src, bordCol, cTitle, cSubT, btn, value, ...items)
+mixin cardPrice(src, bordCol, cTitle, cSubT, btn, btnStyle, value, ...items)
     .price-card
         .price-card__container 
             .price-card__content
@@ -12,12 +12,12 @@ mixin cardPrice(src, bordCol, cTitle, cSubT, btn, value, ...items)
                 each item in items
                     li= item
             .price-card__button
-                button.price-card__btn(type='submit')= btn 
+                button.price-card__btn(type='submit')(class= btnStyle)= btn 
 
 section.price.container 
     h2#price.price-title Course Pricing
     p.price-subtitle Choose pricing that suits to your need.
     .price-cards 
-        +cardPrice('assets/images/star.svg', 'price-card__img1', 'Free', '<span>$</span> <span>0</span> / month', 'Your Current Package', 'price-card__list', 'Free e-book for every class', 'Materials update every day', 'Free download material videos', 'Unlock 5 material videos')
-        +cardPrice('assets/images/key.svg', 'price-card__img2', 'Free', '<span>$</span> <span>75</span> / month', 'Buy Express', 'price-card__list', 'Free e-book for every class', 'Materials update every day', 'Free download material videos', 'Meeting 2 times a week', 'Unlock 15 material videos')
-        +cardPrice('assets/images/crown.svg', 'price-card__img3', 'Free', '<span>$</span> <span>115</span> / month', 'Buy Premium', 'price-card__list', 'Free e-book for every class', 'Materials update every day', 'Free download material videos', 'Private chat with mentor', 'Meeting 3 times a week', 'Unlock up to 30 material videos', 'Unlimited saved class')
+        +cardPrice('assets/images/star.svg', 'price-card__img1', 'Free', '<span>$</span> <span>0</span> / month', 'Your Current Package', 'price-card__btn1', 'price-card__list', 'Free e-book for every class', 'Materials update every day', 'Free download material videos', 'Unlock 5 material videos')
+        +cardPrice('assets/images/key.svg', 'price-card__img2', 'Express', '<span>$</span> <span>75</span> / month', 'Buy Express', 'price-card__btn2', 'price-card__list', 'Free e-book for every class', 'Materials update every day', 'Free download material videos', 'Meeting 2 times a week', 'Unlock 15 material videos')
+        +cardPrice('assets/images/crown.svg', 'price-card__img3', 'Premium', '<span>$</span> <span>115</span> / month', 'Buy Premium', 'price-card__btn3', 'price-card__list', 'Free e-book for every class', 'Materials update every day', 'Free download material videos', 'Private chat with mentor', 'Meeting 3 times a week', 'Unlock up to 30 material videos', 'Unlimited saved class')
