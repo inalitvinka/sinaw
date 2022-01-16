@@ -16,4 +16,115 @@
         text-align: center;
         margin-bottom: 8.4rem;
     }
+
+    &-card {
+        max-width: 37.2rem;
+        width: 100%;
+        background-color: #202246;
+
+        &__container {
+            padding: 4rem 3.6rem 3.6rem 3.6rem;
+            border-radius: 2rem;
+            border: solid .3rem #323465;
+        }
+
+        &__content {
+            display: flex;
+            align-items: flex-start;
+            border-bottom: solid .15rem $bord-priceCard;
+            padding-bottom: 3.2rem;
+            margin-bottom: 2.9rem;
+        }
+        &__img {
+            max-width: 5.6rem;
+            width: 100%;
+            border-radius: .6rem;
+            border: solid .1rem $c-green;
+            padding: 1rem;
+        }
+        &__icon {
+            max-width: 3.6rem;
+            width: 100%;   
+        }
+
+        &__name {
+            margin-left: 3rem;
+        }
+        &__title {
+            @include fontFz;
+        }
+        &__subtitle {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.1rem;
+            line-height: 150%;
+            color: $c-white;
+            opacity: 80%;
+
+            & span {
+                color: $c-cardOrange;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 2.8rem;
+                line-height: 150%;
+            }
+        }
+        
+
+        &__list {
+            margin-bottom: 14.1rem;
+        }
+        &__list li {
+            margin-bottom: 1.6rem;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.4rem;
+            line-height: 150%;
+            color: $c-white;
+            opacity: 80%;
+
+            &:last-child {
+                margin-bottom: 0; 
+            }
+            &::before {
+                content: url("../images/cardPriceEllipse.svg");
+                margin-right: 1.2rem;
+                vertical-align: middle; 
+            }
+        }
+
+        &__button {
+            //margin-top: 2.8rem;
+            text-align: center;
+        }
+        &__btn {
+            color: $btnColor;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 1.3rem;
+            line-height: 1.7rem;
+            padding: 1.6rem 7.5rem;
+            border: solid .1rem $btnColor;
+            border-radius: .6rem;
+            background-color: #202246;
+            opacity: .5;
+            cursor: pointer;
+            
+            &:hover{
+                background-color: $btn-bgHov;
+                color: $c-white;
+                opacity: .8;
+            }
+            &:focus {
+                box-shadow: 0 0 0 .15rem $btnColor;
+                outline: none;
+                opacity: 1;
+            }
+        }
+    }
 }
+//.price-card__subtitle_one {
+  //  font-size: 1.4rem;
+ //   writing-mode: vertical-lr;
+  //  text-orientation: upright;
+//}
