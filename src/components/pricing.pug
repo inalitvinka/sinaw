@@ -1,11 +1,7 @@
 // PRICING SECTION
-mixin list(value, ...items)
-            ul(class=value)
-                each item in items
-                    li= item
 
 
-mixin cardPrice(src, cTitle, cSubT, btn)
+mixin cardPrice(src, cTitle, cSubT, btn, value, ...items)
     .price-card
         .price-card__container 
             .price-card__content
@@ -14,7 +10,9 @@ mixin cardPrice(src, cTitle, cSubT, btn)
                 .price-card__name
                     h3.price-card__title= cTitle 
                     p.price-card__subtitle!= cSubT 
-            +list('price-card__list', 'Free e-book for every class', 'Materials update every day', 'Free download material videos', 'Unlock 5 material videos')
+            ul(class=value)
+                each item in items
+                    li= item
             .price-card__button
                 button.price-card__btn(type='submit')= btn 
 
@@ -22,21 +20,6 @@ section.price.container
     h2#price.price-title Course Pricing
     p.price-subtitle Choose pricing that suits to your need.
     .price-cards 
-        +cardPrice('assets/images/star.svg', 'Free', '<span>$</span> <span>0</span> / month', 'Your Current Package')
-        
-
-
-
-
-
-
-
-
-
-//    mixin list(id, ...items)
-            ul(id=id)
-                each item in items
-                    li= item
-
-    +list('my-list', 1, 2, 3, 4)
-    +list('my-list', 1, 2, 3, 4, 5, 6)
+        +cardPrice('assets/images/star.svg', 'Free', '<span>$</span> <span>0</span> / month', 'Your Current Package', 'price-card__list', 'Free e-book for every class', 'Materials update every day', 'Free download material videos', 'Unlock 5 material videos')
+        +cardPrice('assets/images/key.svg', 'Free', '<span>$</span> <span>75</span> / month', 'Buy Express', 'price-card__list', 'Free e-book for every class', 'Materials update every day', 'Free download material videos', 'Meeting 2 times a week', 'Unlock 15 material videos')
+        +cardPrice('assets/images/crown.svg', 'Free', '<span>$</span> <span>115</span> / month', 'Buy Premium', 'price-card__list', 'Free e-book for every class', 'Materials update every day', 'Free download material videos', 'Private chat with mentor', 'Meeting 3 times a week', 'Unlock up to 30 material videos', 'Unlimited saved class')
