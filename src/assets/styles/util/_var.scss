@@ -1,6 +1,8 @@
 $bgColor: #171836;
 $c-white: #FFFFFF;
 $c-green: #3BF5BD;
+$c-blue: #3BA7F5;
+$c-orange: #F6844B;
 $btnColor: #F5443B;
 $btn-bgHov: #9e261f;
 $c-cardOrange: #F5453D;
@@ -28,4 +30,6 @@ $fz-subtitle: 1.4rem; // make mixin for that
 
 $bg-classCard: linear-gradient(180deg, #202246 -53.38%, rgba(40, 43, 87, 0.17) 100%);
 $bord-classCard: #292B56;
-$bord-priceCard: #272953;
+$bordL-priceCard: #272953;
+$bg-priceCard: #202246;
+$bordR-classCard: #323465;

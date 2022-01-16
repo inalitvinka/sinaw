@@ -51,18 +51,18 @@
             right: 15%;
             transform: rotate(33deg);
         }
-        
+
         &__container {
             padding: 4rem 3.6rem 3.6rem 3.6rem;
             border-radius: 2rem;
-            border: solid .3rem #323465;
-            background-color: #202246;
+            border: solid .3rem $bordR-classCard;
+            background-color: $bg-priceCard;
         }
 
         &__content {
             display: flex;
             align-items: flex-start;
-            border-bottom: solid .15rem $bord-priceCard;
+            border-bottom: solid .15rem $bordL-priceCard;
             padding-bottom: 3.2rem;
             margin-bottom: 2.9rem;
         }
@@ -70,17 +70,17 @@
             max-width: 5.6rem;
             width: 100%;
             border-radius: .6rem;
-            border: solid .1rem $c-green;
+            //border: solid .1rem $c-green;
             padding: 1rem;
         }
         &__img1 {
             border: solid .1rem $c-green;
         }
         &__img2 {
-            border: solid .1rem #3BA7F5;
+            border: solid .1rem $c-blue;
         }
         &__img3 {
-            border: solid .1rem #F6844B;
+            border: solid .1rem $c-orange;
         }
         &__icon {
             max-width: 3.6rem;
@@ -147,7 +147,7 @@
             padding: 1.6rem 7.5rem;
             border: solid .1rem $btnColor;
             border-radius: .6rem;
-            background-color: #202246;
+            background-color: $bg-priceCard;
             cursor: pointer;
             
             &:hover{
@@ -168,7 +168,7 @@
             opacity: 1;
         }
         &__btn3 {
-            background-color: #F5443B;
+            background-color: $btnColor;
             color: $c-white;
             border: none;
         }
