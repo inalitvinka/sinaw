@@ -183,3 +183,69 @@
         }
     }
 }
+// ADAPTIVE
+@media screen and (max-width: 465px) {
+    .price-card {
+
+        &__btn {
+            padding: 1.6rem .5rem;
+        }
+    }
+}
+@media screen and (max-width: 396px) {
+    .price-card {
+
+        &__image {
+            max-width: 12.5rem;  
+        }
+        &__text {
+            font-size: 1.1rem;
+        }
+        &__img {
+            max-width: 5rem;
+            padding: .8rem;
+        }
+        &__title {
+            font-size: 1.5rem;
+        }
+        &__subtitle {
+
+            & span {
+                font-size: 2rem;
+            }
+        }
+
+        &__list li,
+        &__list_two li,
+        &__list_three li {
+            font-size: 1.1rem;
+        }
+    }
+}
+@media screen and (max-width: 350px) {
+    .price-card {
+
+        &__name {
+            margin-left: 1.5rem;
+        }
+        &__title {
+            font-size: 1.3rem;
+        }
+        &__subtitle {
+
+            & span {
+                font-size: 1.55rem;
+            }
+        }
+
+        &__list li,
+        &__list_two li,
+        &__list_three li {
+            font-size: .8rem;
+        }
+
+        &__btn {
+            font-size: 1.1rem;
+        }
+    }
+}
