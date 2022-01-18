@@ -3,7 +3,7 @@
 
 
 .price {
-    padding: 8.5rem 12rem 11.5rem 12rem;
+    padding: 8.5rem 5rem 11.5rem 5rem;
     width: 100%;
 
     &-title {
@@ -19,7 +19,9 @@
     &-cards {
         width: 100%;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4.2rem;
     }
     &-card {
         max-width: 37.2rem;
@@ -70,7 +72,6 @@
             max-width: 5.6rem;
             width: 100%;
             border-radius: .6rem;
-            //border: solid .1rem $c-green;
             padding: 1rem;
         }
         &__img1 {
@@ -110,11 +111,18 @@
             }
         }
         
-
         &__list {
             margin-bottom: 14.1rem;
         }
-        &__list li {
+        &__list_two {
+            margin-bottom: 10.4rem;
+        }
+        &__list_three {
+            margin-bottom: 3rem;
+        }
+        &__list li,
+        &__list_two li,
+        &__list_three li {
             margin-bottom: 1.6rem;
             font-style: normal;
             font-weight: normal;
@@ -140,6 +148,7 @@
             max-width: 30rem;
             width: 100%;
             color: $btnColor;
+            font-family: inherit;
             font-style: normal;
             font-weight: bold;
             font-size: 1.3rem;
@@ -157,7 +166,7 @@
             }
             &:focus {
                 box-shadow: 0 0 0 .15rem $btnColor;
-                outline: none;
+                outline-style: none;
                 opacity: 1;
             }
         }
