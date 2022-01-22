@@ -1,0 +1,251 @@
+@import "../util/var";
+@import "../util/mixins";
+
+
+.price {
+    padding: 8.5rem 5rem 11.5rem 5rem;
+    width: 100%;
+
+    &-title {
+        @include fontCardTitle;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    &-subtitle {
+        @include fontSubt;
+        text-align: center;
+        margin-bottom: 8.4rem;
+    }
+    &-cards {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 4.2rem;
+    }
+    &-card {
+        max-width: 37.2rem;
+        width: 100%;
+        
+        &__active {
+            position: relative;
+        }
+        &__image {
+            position: absolute;
+            top: 0;
+            right: 0;
+            max-width: 15rem;
+            width: 100%;   
+        }
+        &__pic {
+            border-radius: 2rem;
+            position: relative;
+        }
+        &__text {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 150%;
+            color: $c-white;
+            opacity: 80%;
+            position: absolute;
+            top: 15%;
+            right: 15%;
+            transform: rotate(33deg);
+        }
+
+        &__container {
+            padding: 4rem 3.6rem 3.6rem 3.6rem;
+            border-radius: 2rem;
+            border: solid .3rem $bordR-classCard;
+            background-color: $bg-priceCard;
+        }
+
+        &__content {
+            display: flex;
+            align-items: flex-start;
+            border-bottom: solid .15rem $bordL-priceCard;
+            padding-bottom: 3.2rem;
+            margin-bottom: 2.9rem;
+        }
+        &__img {
+            max-width: 5.6rem;
+            width: 100%;
+            border-radius: .6rem;
+            padding: 1rem;
+        }
+        &__img1 {
+            border: solid .1rem $c-green;
+        }
+        &__img2 {
+            border: solid .1rem $c-blue;
+        }
+        &__img3 {
+            border: solid .1rem $c-orange;
+        }
+        &__icon {
+            max-width: 3.6rem;
+            width: 100%;   
+        }
+
+        &__name {
+            margin-left: 3rem;
+        }
+        &__title {
+            @include fontFz;
+        }
+        &__subtitle {
+            font-style: normal;
+            font-weight: 500;
+            font-size: 1.1rem;
+            line-height: 150%;
+            color: $c-white;
+            opacity: 80%;
+
+            & span {
+                color: $c-cardOrange;
+                font-style: normal;
+                font-weight: bold;
+                font-size: 2.8rem;
+                line-height: 150%;
+            }
+        }
+        
+        &__list {
+            margin-bottom: 14.1rem;
+        }
+        &__list_two {
+            margin-bottom: 10.4rem;
+        }
+        &__list_three {
+            margin-bottom: 3rem;
+        }
+        &__list li,
+        &__list_two li,
+        &__list_three li {
+            margin-bottom: 1.6rem;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.4rem;
+            line-height: 150%;
+            color: $c-white;
+            opacity: 80%;
+
+            &:last-child {
+                margin-bottom: 0; 
+            }
+            &::before {
+                content: url("../images/cardPriceEllipse.svg");
+                margin-right: 1.2rem;
+                vertical-align: middle; 
+            }
+        }
+
+        &__button {
+            text-align: center;
+        }
+        &__btn {
+            max-width: 30rem;
+            width: 100%;
+            color: $btnColor;
+            font-family: inherit;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 1.3rem;
+            line-height: 1.7rem;
+            padding: 1.6rem 7.5rem;
+            border: solid .1rem $btnColor;
+            border-radius: .6rem;
+            background-color: $bg-priceCard;
+            cursor: pointer;
+            
+            &:hover{
+                background-color: $btn-bgHov;
+                color: $c-white;
+                opacity: .8;
+            }
+            &:focus {
+                box-shadow: 0 0 0 .15rem $btnColor;
+                outline-style: none;
+                opacity: 1;
+            }
+        }
+        &__btn1 {
+            opacity: .5;
+        }
+        &__btn2 {
+            opacity: 1;
+        }
+        &__btn3 {
+            background-color: $btnColor;
+            color: $c-white;
+            border: none;
+        }
+    }
+}
+// ADAPTIVE
+@media screen and (max-width: 465px) {
+    .price-card {
+
+        &__btn {
+            padding: 1.6rem .5rem;
+        }
+    }
+}
+@media screen and (max-width: 396px) {
+    .price-card {
+
+        &__image {
+            max-width: 12.5rem;  
+        }
+        &__text {
+            font-size: 1.1rem;
+        }
+        &__img {
+            max-width: 5rem;
+            padding: .8rem;
+        }
+        &__title {
+            font-size: 1.5rem;
+        }
+        &__subtitle {
+
+            & span {
+                font-size: 2rem;
+            }
+        }
+
+        &__list li,
+        &__list_two li,
+        &__list_three li {
+            font-size: 1.1rem;
+        }
+    }
+}
+@media screen and (max-width: 350px) {
+    .price-card {
+
+        &__name {
+            margin-left: 1.5rem;
+        }
+        &__title {
+            font-size: 1.3rem;
+        }
+        &__subtitle {
+
+            & span {
+                font-size: 1.55rem;
+            }
+        }
+
+        &__list li,
+        &__list_two li,
+        &__list_three li {
+            font-size: .8rem;
+        }
+
+        &__btn {
+            font-size: 1.1rem;
+        }
+    }
+}
