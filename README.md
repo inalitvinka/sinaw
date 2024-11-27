@@ -1,1 +1,1 @@
-sinaw_itshutle-school
+sinaw_itshatle-school
