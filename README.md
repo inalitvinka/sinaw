@@ -1,1 +1,1 @@
-# diplom
+sinaw_itshutle-school
